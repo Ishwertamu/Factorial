@@ -1,0 +1,11 @@
+factorial_cache = {}
+def factorial(n):
+  if n==1:
+    value = 1
+  if n >1:
+    value = n* factorial(n-1)  
+  factorial_cache[n] = value
+  return value
+
+for n in range(1,101):
+  print(n, ":", factorial(n)) 
